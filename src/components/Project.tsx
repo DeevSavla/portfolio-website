@@ -1,4 +1,4 @@
-import { Chip } from "../App";
+import { Chip } from "./Chip";
 
 type ProjectProps = {
   title: string;

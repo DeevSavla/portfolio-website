@@ -1,4 +1,4 @@
-import { Chip } from "../App";
+import { Chip } from "./Chip";
 
 const Experience = ({ name, timeline, descriptions, skills}:{name:string, timeline:string, descriptions:any, skills:any}) => {
   return (
