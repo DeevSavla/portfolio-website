@@ -1,13 +1,6 @@
-import { useEffect, useState } from "react";
-import buymore from "./assets/buymore.png";
-import cue from "./assets/cue.png";
-import dockter from "./assets/dockter.png";
-import jspm from "./assets/jspm.png";
-import lilp from "./assets/lilp.png";
-import pm from "./assets/pm.png";
-import sqllike from "./assets/sqllike.png";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
+import Project from "./components/Project";
 
 export const Chip = (props: { text: string }) => {
   return (
@@ -18,170 +11,33 @@ export const Chip = (props: { text: string }) => {
 };
 
 export default function Home() {
-  const projects = [
-    {
-      title: "Dockter",
-      description:
-        "A container orchestration tool built on top of docker for multi-node distributed cloud environment",
-      amworking: false,
-      articleLink: "",
-      link: "https://github.com/ayushmd/Dockter",
-      stack: [
-        "Go",
-        "Docker Engine",
-        "Sqlite",
-        "Kafka",
-        "GRPC",
-        "MongoDB",
-        "AWS",
-      ],
-      imgLink: dockter,
-    },
-    {
-      title: "Cue",
-      description:
-        "Cue is a scheduler/time based reminder queue which notifies when message expires for a given TTL.",
-      amworking: false,
-      articleLink: "",
-      link: "https://github.com/ayushmd/cue",
-      stack: ["Go", "GRPC", "Heap", "PebbleDB"],
-      imgLink: cue,
-    },
-    {
-      title: "BuyMore.ai",
-      description:
-        "GenAI-powered conversational fashion outfit generator. Social trends meet 44k+ products. Elevate style with personalized outfit inspirations.",
-      amworking: false,
-      articleLink: "",
-      link: "https://github.com/ayushmd/BuyMore.ai",
-      stack: ["Flask", "MongoDB", "Falcon LLM", "Pinecone", "Reactjs"],
-      imgLink: buymore,
-    },
-    {
-      title: "SqlLike",
-      description: "A sql-like query language parser.",
-      amworking: false,
-      articleLink: "",
-      link: "https://github.com/ayushmd/sqlLike",
-      stack: ["C++", "Lexer", "Parser - RDP", "AST"],
-      imgLink: sqllike,
-    },
-    {
-      title: "LiLP",
-      description:
-        "LiLP is a tool for local pdf operations like Merge, Split and Conversion from Pdf to Docx",
-      amworking: false,
-      articleLink: "",
-      link: "https://github.com/ayushmd/LiLP",
-      stack: ["Python", "Tkinter", "PyPDF2", "pdf2docx"],
-      imgLink: lilp,
-    },
-    {
-      title: "Jspm",
-      description:
-        "Jspm is a package manager for JavaScript that allows you to install and manage packages from the npm registry.",
-      amworking: false,
-      articleLink: "",
-      link: "https://github.com/ayushmd/jspm",
-      stack: ["Go", "semver parsing", "TUI", "Dependency Resolution"],
-      imgLink: jspm,
-    },
-    {
-      title: "go-ipc",
-      description:
-        "A go process managment library that gives ability to manage processes and communicate with them using system IPC.",
-      amworking: true,
-      articleLink: "",
-      link: "https://github.com/ayushmd/go-ipc",
-      stack: [],
-      imgLink: pm,
-    },
-  ];
-
-  const [showNav, setShowNav] = useState(false);
-  const [showImages, setShowImages] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowNav(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const skills = {
     languages: [
       { name: "C++", icon: <i className="fa-solid fa-code" /> },
       { name: "JavaScript", icon: <i className="fa-brands fa-js" /> },
-      { name: "TypeScript", icon: <i className="fa-brands fa-js" /> }, // closest FA
+      { name: "TypeScript", icon: <i className="fa-brands fa-js" /> }, 
       { name: "Java", icon: <i className="fa-brands fa-java" /> },
       { name: "Python", icon: <i className="fa-brands fa-python" /> },
-      { name: "Rust", icon: <i className="fa-solid fa-gear" /> }, // no FA Rust icon
+      { name: "Rust", icon: <i className="fa-solid fa-gear" /> }, 
       { name: "SQL", icon: <i className="fa-solid fa-database" /> },
     ],
 
     technologies: [
       { name: "React.js", icon: <i className="fa-brands fa-react" /> },
       { name: "Node.js", icon: <i className="fa-brands fa-node-js" /> },
-      { name: "Express.js", icon: <i className="fa-brands fa-node-js" /> }, // closest
-      { name: "MongoDB", icon: <i className="fa-solid fa-database" /> }, // closest
+      { name: "Express.js", icon: <i className="fa-brands fa-node-js" /> }, 
+      { name: "MongoDB", icon: <i className="fa-solid fa-database" /> }, 
       { name: "React Native", icon: <i className="fa-brands fa-react" /> },
       { name: "Docker", icon: <i className="fa-brands fa-docker" /> },
-      { name: "Firebase", icon: <i className="fa-solid fa-fire" /> }, // closest
-      { name: "Tailwind", icon: <i className="fa-solid fa-wind" /> }, // closest
-      { name: "Signoz", icon: <i className="fa-solid fa-chart-line" /> }, // closest
+      { name: "Firebase", icon: <i className="fa-solid fa-fire" /> },
+      { name: "Tailwind", icon: <i className="fa-solid fa-wind" /> }, 
+      { name: "Signoz", icon: <i className="fa-solid fa-chart-line" /> }, 
     ],
   };
 
   return (
     <div className="flex justify-center min-h-screen p-4 sm:p-6 lg:p-10">
-      <nav
-        className={`fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 z-50 bg-white/5 backdrop-blur-md border border-white/10 px-3 sm:px-6 py-2 rounded-full shadow-md transition-all duration-300 ease-in-out transform ${showNav ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}`}
-      >
-        <div className="flex items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm">
-          <a
-            href="#about"
-            className="hover:text-blue-400 transition-colors duration-200 whitespace-nowrap"
-          >
-            About
-          </a>
-          <a
-            href="#experience"
-            className="hover:text-blue-400 transition-colors duration-200 whitespace-nowrap"
-          >
-            Experience
-          </a>
-          <a
-            href="#skills"
-            className="hover:text-blue-400 transition-colors duration-200 whitespace-nowrap"
-          >
-            Skills
-          </a>
-          <a
-            href="#projects"
-            className="hover:text-blue-400 transition-colors duration-200 whitespace-nowrap"
-          >
-            Projects
-          </a>
-          <div className="hidden sm:block w-px h-4 bg-white/20 mx-2"></div>
-          <a
-            href="https://github.com/ayushmd"
-            target="_blank"
-            className="hover:text-blue-400 transition-colors duration-200 hidden md:block"
-            aria-label="GitHub"
-          >
-            <i className="fab fa-github text-base"></i>
-          </a>
-          <a
-            href="https://linkedin.com/in/ayush-des"
-            target="_blank"
-            className="hover:text-blue-400 transition-colors duration-200 hidden md:block"
-            aria-label="LinkedIn"
-          >
-            <i className="fab fa-linkedin text-base"></i>
-          </a>
-        </div>
-      </nav>
 
       <div className="w-full max-w-6xl mt-4 lg:mx-64">
         <section id="about" className="scroll-mt-20 sm:scroll-mt-10">
@@ -192,8 +48,7 @@ export default function Home() {
 
             <div className="mt-4">
               <p className="text-sm">
-                I am a software engineer with a passion for building scalable
-                applications, dev-tools, core and Cloud-native applications.
+                I build reliable mobile and web experiences that stay fast under real-world traffic. Currently crafting production features for consumer apps and automating data-heavy backends.
               </p>
             </div>
 
@@ -313,108 +168,77 @@ export default function Home() {
         >
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="text-xl sm:text-2xl font-bold">Projects</div>
-            <div className="flex items-center text-xs sm:text-sm text-gray-400 gap-2">
-              <div
-                className="checkbox-apple cursor-pointer"
-                onClick={() => {
-                  setShowImages((prev) => !prev);
-                  console.log("Show Images:", !showImages);
-                }}
-              >
-                <input
-                  className="yep"
-                  id="check-apple"
-                  type="checkbox"
-                  checked={showImages}
-                  onChange={() => {}}
-                  onClick={(e) => e.stopPropagation()}
-                />
-                <label htmlFor="check-apple" className="cursor-pointer"></label>
-              </div>
-              <p>Show Images</p>
-            </div>
           </div>
+          <Project
+            title="Safar"
+            link="https://github.com/DeevSavla/Safar"
+            description={[
+              "Designed and developed Safar, an AI-powered travel itinerary planner tailored for solo travelers, families, and groups, providing a web-based experience to simplify and personalize the trip planning process.",
+              "Integrated features like smart itinerary generation using Gemini APIs, real-time collaboration, budget tracking, andinteractive mapping tools, enhancing user convenience and transforming the way people plan and experience travel.",
+            ]}
+            stack={[
+              "React.js",
+              "Node.js",
+              "Express.js",
+              "MongoDB",
+              "Socket.io",
+              "FastAPI",
+            ]}
+            amworking={false}
+          />
 
-          <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mt-4">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="text-white border border-gray-300 rounded-lg relative shadow-sm"
-              >
-                {showImages && (
-                  <img
-                    src={project.imgLink}
-                    alt=""
-                    className="rounded-t-lg w-full h-32 sm:h-48 object-cover"
-                  />
-                )}
+          <Project
+            title="LikhAI"
+            link="https://github.com/DeevSavla/likhai"
+            description={[
+              "Designed and developed an AI-driven content collaboration platform for writers and filmmakers, providing real-time editing, automated scene descriptions, and context-aware suggestions to enhance narrative tone and engagement.",
+              "Integrated multi-modal support (text, audio, and visual), version history tracking, and export capabilities for multiple formats, making content creation and publishing seamless.",
+            ]}
+            stack={[
+              "React.js",
+              "Node.js",
+              "Express.js",
+              "MongoDB",
+              "TinyMCE",
+              "AI APIs",
+            ]}
+          />
 
-                <div className="p-4 sm:p-5 pb-4">
-                  <div className="w-full flex flex-col sm:flex-row justify-between items-start gap-2 sm:gap-4">
-                    <div className="text-lg sm:text-xl font-semibold">
-                      {project.title}
-                    </div>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-xs sm:text-sm border border-gray-700 rounded-lg px-2 sm:px-3 py-1 whitespace-nowrap"
-                    >
-                      {project.link.includes("github.com") ? (
-                        <>
-                          <i className="fab fa-github text-white text-base"></i>
-                          <span className="ml-2">GitHub</span>
-                        </>
-                      ) : (
-                        <>
-                          <i className="fas fa-globe text-white text-base"></i>
-                          <span className="ml-2">Visit</span>
-                        </>
-                      )}
-                    </a>
-                  </div>
+          <Project
+            title="Doctor Appointment System"
+            link="https://github.com/DeevSavla/Doc_Appoinment_System" // replace
+            description={[
+              "Developed a role-based hospital management platform with secure JWT authentication, real-time doctor availability, and an AI-powered assistant (Medibot) to streamline patient interactions and appointment workflows.",
+              "Engineered a dynamic React.js + Redux frontend, integrated RazorPay for secure payments, and optimized MongoDB queries for high-performance transactions and data retrieval.",
+            ]}
+            stack={[
+              "React.js",
+              "Express.js",
+              "Node.js",
+              "MongoDB",
+              "Redux",
+              "RazorPay",
+              "JWT Auth",
+            ]}
+          />
 
-                  <div className="mt-2 text-gray-300 text-xs sm:text-sm leading-relaxed min-h-[60px] sm:min-h-[80px]">
-                    {project.description.length > 120 ? (
-                      <p>{project.description.substring(0, 120)}...</p>
-                    ) : (
-                      <p>{project.description}</p>
-                    )}
-                  </div>
-
-                  {project.amworking ? (
-                    <div className="flex items-center text-xs sm:text-sm text-slate-400 mt-2">
-                      <i className="fas fa-gears mr-2 "></i>
-                      <span>Work in progress</span>
-                    </div>
-                  ) : (
-                    <>
-                      {project.articleLink !== "" && (
-                        <div className="flex items-center text-xs sm:text-sm text-blue-400 cursor-pointer mt-2">
-                          <span className="mr-2">Read Article</span>
-                          <i className="fa-solid fa-chevron-right text-xs"></i>
-                        </div>
-                      )}
-                    </>
-                  )}
-
-                  <div className="mt-4 flex flex-wrap gap-1">
-                    {project.stack.map((st, idx) => (
-                      <Chip text={st} key={idx} />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Project
+            title="Anonymous Message App"
+            link="https://github.com/DeevSavla/message_app" 
+            description={[
+              "Built a real-time anonymous messaging platform using Next.js, providing an interactive UI with optimized performance, server-side rendering, and responsive design.",
+              "Implemented OTP-based email verification via NodeMailer, integrated NextAuth for authentication, and incorporated Gemini APIs to generate intelligent, context-aware message suggestions improving engagement.",
+            ]}
+            stack={[
+              "Next.js",
+              "MongoDB",
+              "NextAuth",
+              "NodeMailer",
+              "Gemini APIs",
+              "SSR",
+            ]}
+          />
         </section>
-
-        <div className="border-t border-gray-500 rounded-lg mt-8 sm:mt-12"></div>
-
-        <footer className="text-center text-gray-400 py-6 sm:py-8 border-t border-gray-800 text-xs sm:text-sm">
-          <p>Built with Vite and Tailwind CSS</p>
-          <p className="mt-2">© 2025 Ayush Deshmukh</p>
-        </footer>
       </div>
     </div>
   );
