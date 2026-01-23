@@ -1,13 +1,13 @@
 const Skills = ({ skills = [] }:{skills:any}) => {
   return (
-    <div className="flex gap-2 sm:gap-4 flex-wrap items-center">
+     <div className="flex gap-3 flex-wrap items-center">
       {skills.map((skill:any, idx:number) => (
         <div
           key={idx}
-          className="flex items-center bg-[#18181b] border border-[#27272a] rounded-lg px-3 py-2 text-white font-medium text-xs gap-2 shadow"
+          className="flex items-center bg-zinc-900 border border-zinc-800 rounded-lg px-4 py-2.5 text-white font-medium text-sm gap-2.5 hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-200 hover:scale-105"
         >
-          <div>{skill.icon}</div>
-          <div className="text-xs sm:text-sm">{skill.name}</div>
+          <div className="text-zinc-400">{skill.icon}</div>
+          <div>{skill.name}</div>
         </div>
       ))}
     </div>

@@ -29,129 +29,147 @@ export default function Home() {
   };
 
   return (
-    <div className="flex justify-center min-h-screen p-4 sm:p-6 lg:p-10">
-      <div className="w-full max-w-6xl mt-4 lg:mx-64">
-        <section id="about" className="scroll-mt-20 sm:scroll-mt-10">
-          <div className="mx-2 sm:mx-4">
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-2 justify-between">
-              <div className="text-2xl sm:text-3xl font-bold">Deev Savla</div>
-            </div>
+    <div className="min-h-screen bg-black text-white">
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+      <div className="flex justify-center p-4 sm:p-6 lg:p-10">
+        <div className=" mt-8">
+          {/* Hero Section */}
+          <section id="about" className="scroll-mt-20">
+            <div className="space-y-6">
+              <div>
+                <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent mb-3">
+                  Deev Savla
+                </h1>
+                <div className="text-lg text-zinc-400 font-medium">
+                  Software Engineer
+                </div>
+              </div>
 
-            <div className="mt-4">
-              <p className="text-sm">
+              <p className="text-base text-zinc-300 leading-relaxed max-w-2xl">
                 I build reliable mobile and web experiences that stay fast under
                 real-world traffic. Currently crafting production features for
                 consumer apps and automating data-heavy backends.
               </p>
-            </div>
 
-            <div className="flex my-4 items-center gap-2 sm:gap-4 flex-wrap">
-              <a
-                href="https://drive.google.com/file/d/1CSSMCrE181yBQmxWm_9TR521yytLHQXO/view?usp=sharing"
-                target="_blank"
-              >
-                <div className="cursor-pointer flex items-center gap-2 text-xs sm:text-sm border border-gray-800 dark:border-gray-200 text-gray-800 dark:text-gray-200 px-2 sm:px-3 py-1 rounded-md hover:bg-gray-800 hover:text-white dark:hover:bg-gray-200 dark:hover:text-black transition">
-                  <i className="fas fa-download"></i>
-                  <div>Resume</div>
-                </div>
-              </a>
+              <div className="flex flex-wrap gap-3 pt-2">
+                <a
+                  href="https://drive.google.com/file/d/1CSSMCrE181yBQmxWm_9TR521yytLHQXO/view?usp=sharing"
+                  target="_blank"
+                  className="group"
+                >
+                  <div className="flex items-center gap-2.5 text-sm border border-zinc-800 bg-zinc-900 text-zinc-300 px-4 py-2.5 rounded-lg hover:bg-zinc-800 hover:border-zinc-700 hover:text-white transition-all duration-200">
+                    <i className="fas fa-download group-hover:scale-110 transition-transform"></i>
+                    <span className="font-medium">Resume</span>
+                  </div>
+                </a>
 
-              <a href="https://github.com/DeevSavla" target="_blank">
-                <div className="cursor-pointer flex items-center gap-2 text-xs sm:text-sm border border-gray-800 dark:border-gray-200 text-gray-800 dark:text-gray-200 px-2 sm:px-3 py-1 rounded-md hover:bg-gray-800 hover:text-white dark:hover:bg-gray-200 dark:hover:text-black transition">
-                  <i className="fab fa-github fa-lg"></i>
-                  <div>Github</div>
-                </div>
-              </a>
+                <a
+                  href="https://github.com/DeevSavla"
+                  target="_blank"
+                  className="group"
+                >
+                  <div className="flex items-center gap-2.5 text-sm border border-zinc-800 bg-zinc-900 text-zinc-300 px-4 py-2.5 rounded-lg hover:bg-zinc-800 hover:border-zinc-700 hover:text-white transition-all duration-200">
+                    <i className="fab fa-github group-hover:scale-110 transition-transform"></i>
+                    <span className="font-medium">GitHub</span>
+                  </div>
+                </a>
 
-              <a
-                href="https://www.linkedin.com/in/deev-savla-67820a2b3/"
-                target="_blank"
-              >
-                <div className="cursor-pointer flex items-center gap-2 text-xs sm:text-sm border border-gray-800 dark:border-gray-200 text-gray-800 dark:text-gray-200 px-2 sm:px-3 py-1 rounded-md hover:bg-gray-800 hover:text-white dark:hover:bg-gray-200 dark:hover:text-black transition">
-                  <i className="fab fa-linkedin fa-lg"></i>
-                  <div>Linkedin</div>
-                </div>
-              </a>
+                <a
+                  href="https://www.linkedin.com/in/deev-savla-67820a2b3/"
+                  target="_blank"
+                  className="group"
+                >
+                  <div className="flex items-center gap-2.5 text-sm border border-zinc-800 bg-zinc-900 text-zinc-300 px-4 py-2.5 rounded-lg hover:bg-zinc-800 hover:border-zinc-700 hover:text-white transition-all duration-200">
+                    <i className="fab fa-linkedin group-hover:scale-110 transition-transform"></i>
+                    <span className="font-medium">LinkedIn</span>
+                  </div>
+                </a>
 
-              <a href="mailto:savla.deev@gmail.com" target="_blank">
-                <div className="cursor-pointer flex items-center gap-2 text-xs sm:text-sm border border-gray-800 dark:border-gray-200 text-gray-800 dark:text-gray-200 px-2 sm:px-3 py-1 rounded-md hover:bg-gray-800 hover:text-white dark:hover:bg-gray-200 dark:hover:text-black transition">
-                  <i className="fas fa-envelope fa-lg"></i>
-                  <div className="hidden sm:block">savla.deev@gmail.com</div>
-                  <div className="sm:hidden">Email</div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <div className="border-t border-gray-500 rounded-lg my-6 sm:my-8"></div>
-
-        <section
-          id="experience"
-          className="my-6 sm:my-8 scroll-mt-20 sm:scroll-mt-10"
-        >
-          <div className="my-6 text-xl sm:text-2xl font-bold px-2 sm:px-0">
-            Experience
-          </div>
-
-          <div className="w-full flex flex-col gap-4 sm:gap-6 px-2 sm:px-0">
-            {experience.map((exp, i) => (
-              <Experience
-                key={i}
-                name={exp.name}
-                timeline={exp.timeline}
-                descriptions={exp.descriptions}
-                skills={exp.skills}
-              />
-            ))}
-          </div>
-        </section>
-
-        <section
-          id="skills"
-          className="my-6 sm:my-8 scroll-mt-20 sm:scroll-mt-10"
-        >
-          <div className="my-6 text-xl sm:text-2xl font-bold px-2 sm:px-0">
-            Skills
-          </div>
-
-          <div className="space-y-6 border border-black rounded-lg p-4">
-            <div>
-              <div className="font-semibold mb-2 text-sm sm:text-base">
-                Languages
+                <a
+                  href="mailto:savla.deev@gmail.com"
+                  target="_blank"
+                  className="group"
+                >
+                  <div className="flex items-center gap-2.5 text-sm border border-zinc-800 bg-zinc-900 text-zinc-300 px-4 py-2.5 rounded-lg hover:bg-zinc-800 hover:border-zinc-700 hover:text-white transition-all duration-200">
+                    <i className="fas fa-envelope group-hover:scale-110 transition-transform"></i>
+                    <span className="font-medium hidden sm:inline">
+                      savla.deev@gmail.com
+                    </span>
+                    <span className="font-medium sm:hidden">Email</span>
+                  </div>
+                </a>
               </div>
-              <Skills skills={skills.languages} />
             </div>
+          </section>
 
-            <div>
-              <div className="font-semibold mb-2 text-sm sm:text-base">
-                Technologies
+          {/* Divider */}
+          <div className="h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent my-12"></div>
+
+          {/* Experience Section */}
+          <section id="experience" className="scroll-mt-20">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-8 bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
+              Experience
+            </h2>
+            <div className="space-y-6">
+              {experience.map((exp, i) => (
+                <Experience
+                  key={i}
+                  name={exp.name}
+                  timeline={exp.timeline}
+                  descriptions={exp.descriptions}
+                  skills={exp.skills}
+                />
+              ))}
+            </div>
+          </section>
+
+          {/* Skills Section */}
+          <section id="skills" className="mt-16 scroll-mt-20">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-8 bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
+              Skills
+            </h2>
+            <div className="space-y-8 border border-zinc-800 rounded-xl p-6 bg-gradient-to-br from-zinc-900/30 to-zinc-950/30">
+              <div>
+                <div className="font-semibold mb-4 text-zinc-200 text-base">
+                  Languages
+                </div>
+                <Skills skills={skills.languages} />
               </div>
-              <Skills skills={skills.technologies} />
+
+              <div className="h-px bg-zinc-800"></div>
+
+              <div>
+                <div className="font-semibold mb-4 text-zinc-200 text-base">
+                  Technologies & Frameworks
+                </div>
+                <Skills skills={skills.technologies} />
+              </div>
             </div>
-          </div>
+          </section>
 
-          <div className="w-full flex flex-col gap-4 sm:gap-6 px-2 sm:px-0"></div>
-        </section>
-
-        <section
-          id="projects"
-          className="my-6 scroll-mt-20 sm:scroll-mt-10 px-2 sm:px-0"
-        >
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div className="text-xl sm:text-2xl font-bold">Projects</div>
-          </div>
-          {projects.map((p, i) => (
-            <Project
-              key={i}
-              title={p.title}
-              link={p.link}
-              description={p.description}
-              stack={p.stack}
-              amworking={p.amworking}
-            />
-          ))}
-        </section>
+          {/* Projects Section */}
+          <section id="projects" className="mt-16 mb-16 scroll-mt-20">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-8 bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
+              Projects
+            </h2>
+            <div>
+              {projects.map((p, i) => (
+                <Project
+                  key={i}
+                  title={p.title}
+                  githubLink={p.githubLink}
+                  imgLink={p.imgLink}
+                  visitLink={p.visitLink}
+                  description={p.description}
+                  stack={p.stack}
+                />
+              ))}
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   );

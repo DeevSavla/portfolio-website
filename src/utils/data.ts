@@ -33,11 +33,12 @@ export const experience = [
 export const projects = [
   {
     title: "Safar",
-    link: "https://github.com/DeevSavla/Safar",
+    githubLink: "https://github.com/DeevSavla/Safar",
+    visitLink: "https://safar-swart.vercel.app/",
+    imgLink:"https://ik.imagekit.io/q4gjs3lt4/Screenshot_2025-09-15_113045_EZFC8fFv8.png?updatedAt=1760423734306",
     description: [
-      "AI travel itinerary planner",
-      "Gemini API recommendations",
-      "Collaboration + budget tools",
+      "Designed and developed Safar, an AI-powered travel itinerary planner tailored for solo travelers, families, and groups, providing a web-based experience to simplify and personalize the trip planning process.",
+      "Integrated features like smart itinerary generation using Gemini APIs, real-time collaboration, budget tracking, and interactive mapping tools, enhancing user convenience and transforming the way people plan and experience travel.",
     ],
     stack: [
       "React.js",
@@ -51,11 +52,12 @@ export const projects = [
   },
   {
     title: "LikhAI",
-    link: "https://github.com/DeevSavla/likhai",
+    githubLink: "https://github.com/DeevSavla/likhai",
+    visitLink: "https://likh-ai.vercel.app/",
+    imgLink:"https://ik.imagekit.io/q4gjs3lt4/Screenshot_2025-09-15_113045_EZFC8fFv8.png?updatedAt=1760423734306",
     description: [
-      "AI content collaboration platform",
-      "Real-time writing & suggestions",
-      "Multi-format export",
+      "Designed and developed an AI-driven content collaboration platform for writers and filmmakers, featuring real-time editing, automated scene descriptions, and context-aware suggestions to refine tone and engagement.",
+      "Integrated multi-modal support (text, audio, and visual), version history tracking, and export capabilities for various formats, ensuring seamless content creation and publishing.",
     ],
     stack: [
       "React.js",
@@ -69,11 +71,12 @@ export const projects = [
   },
   {
     title: "Doctor Appointment System",
-    link: "https://github.com/DeevSavla/Doc_Appoinment_System",
+    githubLink: "https://github.com/DeevSavla/Doc_Appoinment_System",
+    imgLink:"https://ik.imagekit.io/q4gjs3lt4/Screenshot_2025-09-15_113045_EZFC8fFv8.png?updatedAt=1760423734306",
+    visitLink: "https://doc-appoinment-system.vercel.app/",
     description: [
-      "Role-based hospital workflow",
-      "JWT auth + RazorPay",
-      "Real-time doctor availability",
+      "Developed a role-based hospital management platform featuring secure JWT authentication, real-time doctor availability tracking, and an AI-powered assistant (Medibot) for patient interactions and appointment workflows.",
+      "Engineered a dynamic and responsive frontend using React.js and Redux, integrated a secure payment gateway, and optimized MongoDB queries for high-performance data access and transaction handling.",
     ],
     stack: [
       "React.js",
@@ -88,11 +91,12 @@ export const projects = [
   },
   {
     title: "Anonymous Message App",
-    link: "https://github.com/DeevSavla/message_app",
+    githubLink: "https://github.com/DeevSavla/message_app",
+    imgLink:"https://ik.imagekit.io/q4gjs3lt4/Screenshot_2025-09-15_113045_EZFC8fFv8.png?updatedAt=1760423734306",
+    visitLink: "https://anonymous-message-app-one.vercel.app/",
     description: [
-      "Anonymous messaging using Next.js",
-      "OTP verification + SSR",
-      "AI message suggestions",
+      "Built a real-time anonymous messaging platform using Next.js, delivering a seamless, interactive user experience with server-side rendering, optimized performance, and responsive design.",
+      "Implemented robust authentication with NextAuth and OTP-based email verification using NodeMailer, and integrated Gemini APIs to provide intelligent, context-aware message suggestions, enhancing user engagement.",
     ],
     stack: [
       "Next.js",
