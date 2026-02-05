@@ -29,88 +29,106 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-slate-50 text-slate-900">
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       />
-      <div className="flex justify-center p-4 sm:p-6 lg:p-10">
-        <div className=" mt-8">
+      <div className="relative flex justify-center p-4 sm:p-6 lg:p-10">
+        <div className="mt-4 w-full max-w-5xl">
           {/* Hero Section */}
           <section id="about" className="scroll-mt-20">
-            <div className="space-y-6">
-              <div>
-                <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent mb-3">
-                  Deev Savla
-                </h1>
-                <div className="text-lg text-zinc-400 font-medium">
-                  Software Engineer
+            <div className="grid gap-8 rounded-2xl bg-white p-10 shadow-md md:grid-cols-[minmax(0,2fr)_minmax(0,1.2fr)] md:items-center">
+              {/* Left: Text content */}
+              <div className="space-y-6">
+                <div className="space-y-3">
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                    Software Engineer • Full Stack
+                  </div>
+                  <h1 className="text-4xl font-semibold text-slate-900 sm:text-5xl">
+                    Deev Savla
+                  </h1>
+                </div>
+
+                <p className="max-w-2xl text-base leading-relaxed text-slate-600">
+                  I design and ship fast, reliable mobile and web products that hold up
+                  under real-world traffic with a focus on polished user experiences
+                  and scalable, data-heavy backends.
+                </p>
+
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600">
+                  <div className="inline-flex items-center gap-2">
+                    <span className="text-base">📍</span>
+                    <span>Mumbai, India</span>
+                  </div>
+                  <div className="inline-flex items-center gap-2">
+                    <span className="text-base">📞</span>
+                    <span>+91 8850783854</span>
+                  </div>
+                  <div className="inline-flex items-center gap-2">
+                    <span className="text-base">✉️</span>
+                    <span>savla.deev@gmail.com</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-3 pt-1">
+                  <a
+                    href="https://drive.google.com/file/d/1CSSMCrE181yBQmxWm_9TR521yytLHQXO/view?usp=sharing"
+                    target="_blank"
+                    className="group"
+                  >
+                    <div className="flex items-center gap-2.5 rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-medium text-slate-50 shadow-md transition-all duration-200 group-hover:bg-slate-800 group-hover:shadow-lg">
+                      <span>My Resume</span>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://github.com/DeevSavla"
+                    target="_blank"
+                    className="group"
+                  >
+                    <div className="flex items-center gap-2.5 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-medium text-slate-800 shadow-sm transition-all duration-200 hover:border-slate-300 hover:bg-white">
+                      <span>GitHub</span>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://www.linkedin.com/in/deev-savla-67820a2b3/"
+                    target="_blank"
+                    className="group"
+                  >
+                    <div className="flex items-center gap-2.5 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-medium text-slate-800 shadow-sm transition-all duration-200 hover:border-slate-300 hover:bg-white">
+                      <span>LinkedIn</span>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://leetcode.com/DeevSavla9"
+                    target="_blank"
+                    className="group"
+                  >
+                    <div className="flex items-center gap-2.5 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-medium text-slate-800 shadow-sm transition-all duration-200 hover:border-slate-300 hover:bg-white">
+                      <span>LeetCode</span>
+                    </div>
+                  </a>
                 </div>
               </div>
 
-              <p className="text-base text-zinc-300 leading-relaxed max-w-2xl">
-                I build reliable mobile and web experiences that stay fast under
-                real-world traffic. Currently crafting production features for
-                consumer apps and automating data-heavy backends.
-              </p>
-
-              <div className="flex flex-wrap gap-3 pt-2">
-                <a
-                  href="https://drive.google.com/file/d/1CSSMCrE181yBQmxWm_9TR521yytLHQXO/view?usp=sharing"
-                  target="_blank"
-                  className="group"
-                >
-                  <div className="flex items-center gap-2.5 text-sm border border-zinc-800 bg-zinc-900 text-zinc-300 px-4 py-2.5 rounded-lg hover:bg-zinc-800 hover:border-zinc-700 hover:text-white transition-all duration-200">
-                    <i className="fas fa-download group-hover:scale-110 transition-transform"></i>
-                    <span className="font-medium">Resume</span>
-                  </div>
-                </a>
-
-                <a
-                  href="https://github.com/DeevSavla"
-                  target="_blank"
-                  className="group"
-                >
-                  <div className="flex items-center gap-2.5 text-sm border border-zinc-800 bg-zinc-900 text-zinc-300 px-4 py-2.5 rounded-lg hover:bg-zinc-800 hover:border-zinc-700 hover:text-white transition-all duration-200">
-                    <i className="fab fa-github group-hover:scale-110 transition-transform"></i>
-                    <span className="font-medium">GitHub</span>
-                  </div>
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/deev-savla-67820a2b3/"
-                  target="_blank"
-                  className="group"
-                >
-                  <div className="flex items-center gap-2.5 text-sm border border-zinc-800 bg-zinc-900 text-zinc-300 px-4 py-2.5 rounded-lg hover:bg-zinc-800 hover:border-zinc-700 hover:text-white transition-all duration-200">
-                    <i className="fab fa-linkedin group-hover:scale-110 transition-transform"></i>
-                    <span className="font-medium">LinkedIn</span>
-                  </div>
-                </a>
-
-                <a
-                  href="mailto:savla.deev@gmail.com"
-                  target="_blank"
-                  className="group"
-                >
-                  <div className="flex items-center gap-2.5 text-sm border border-zinc-800 bg-zinc-900 text-zinc-300 px-4 py-2.5 rounded-lg hover:bg-zinc-800 hover:border-zinc-700 hover:text-white transition-all duration-200">
-                    <i className="fas fa-envelope group-hover:scale-110 transition-transform"></i>
-                    <span className="font-medium hidden sm:inline">
-                      savla.deev@gmail.com
-                    </span>
-                    <span className="font-medium sm:hidden">Email</span>
-                  </div>
-                </a>
+              {/* Right: Photo / avatar */}
+              <div className="flex h-40 w-40 items-center justify-center rounded-full bg-slate-100 shadow-inner md:h-48 md:w-48 md:justify-self-end md:mr-2">
+                <div className="flex h-32 w-32 items-center justify-center rounded-full bg-slate-900 text-4xl font-semibold text-slate-50 md:h-40 md:w-40">
+                  DS
+                </div>
               </div>
             </div>
           </section>
 
           {/* Divider */}
-          <div className="h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent my-12"></div>
+          <div className="my-12 h-px bg-slate-200" />
 
           {/* Experience Section */}
           <section id="experience" className="scroll-mt-20">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-8 bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
+            <h2 className="mb-8 text-2xl font-semibold text-slate-900 sm:text-3xl">
               Experience
             </h2>
             <div className="space-y-6">
@@ -128,21 +146,21 @@ export default function Home() {
 
           {/* Skills Section */}
           <section id="skills" className="mt-16 scroll-mt-20">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-8 bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
+            <h2 className="mb-8 text-2xl font-semibold text-slate-900 sm:text-3xl">
               Skills
             </h2>
-            <div className="space-y-8 border border-zinc-800 rounded-xl p-6 bg-gradient-to-br from-zinc-900/30 to-zinc-950/30">
+            <div className="space-y-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-md">
               <div>
-                <div className="font-semibold mb-4 text-zinc-200 text-base">
+                <div className="mb-4 text-base font-semibold text-slate-900">
                   Languages
                 </div>
                 <Skills skills={skills.languages} />
               </div>
 
-              <div className="h-px bg-zinc-800"></div>
+              <div className="h-px bg-slate-100" />
 
               <div>
-                <div className="font-semibold mb-4 text-zinc-200 text-base">
+                <div className="mb-4 text-base font-semibold text-slate-900">
                   Technologies & Frameworks
                 </div>
                 <Skills skills={skills.technologies} />
@@ -151,8 +169,8 @@ export default function Home() {
           </section>
 
           {/* Projects Section */}
-          <section id="projects" className="mt-16 mb-16 scroll-mt-20">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-8 bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
+          <section id="projects" className="mt-16 scroll-mt-20">
+            <h2 className="mb-8 text-2xl font-semibold text-slate-900 sm:text-3xl">
               Projects
             </h2>
             <div>
@@ -167,6 +185,45 @@ export default function Home() {
                   stack={p.stack}
                 />
               ))}
+            </div>
+          </section>
+
+          {/* Contact Section */}
+          <section id="contact" className="mt-16 mb-20 scroll-mt-20">
+            <div className="rounded-2xl bg-white px-6 py-8 shadow-md">
+              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                Contact
+              </div>
+              <h2 className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
+                Let&apos;s build something users love
+              </h2>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600">
+                Open to roles where product reliability, performance, and shipping fast
+                matter. Happy to share more work samples or dive into architecture.
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-3">
+                <a
+                  href="mailto:savla.deev@gmail.com"
+                  className="inline-flex items-center rounded-full bg-slate-900 px-4 py-2 text-sm font-medium text-slate-50 shadow-md transition-colors duration-200 hover:bg-slate-800"
+                >
+                  Email me
+                </a>
+                <a
+                  href="https://github.com/DeevSavla"
+                  target="_blank"
+                  className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-800 shadow-sm transition-colors duration-200 hover:border-slate-300 hover:bg-white"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/deev-savla-67820a2b3/"
+                  target="_blank"
+                  className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-800 shadow-sm transition-colors duration-200 hover:border-slate-300 hover:bg-white"
+                >
+                  LinkedIn
+                </a>
+              </div>
             </div>
           </section>
         </div>

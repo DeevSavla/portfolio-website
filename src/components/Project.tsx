@@ -11,32 +11,34 @@ type ProjectProps = {
   showImages?: boolean;
 };
 
-const Project = ({ title, githubLink,visitLink,imgLink, description, stack }: ProjectProps) => {
+const Project = ({ title, githubLink, visitLink, imgLink, description, stack }: ProjectProps) => {
   
   return (
-    <div className="rounded-xl mt-6 border border-zinc-800 bg-gradient-to-br from-zinc-900/50 to-zinc-950/50 hover:border-zinc-700 transition-all duration-300 hover:shadow-lg hover:shadow-zinc-900/50">
-      <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="mt-6 rounded-2xl border border-slate-200 bg-white shadow-md transition-all duration-200 hover:-translate-y-1.5 hover:shadow-lg">
+      <div className="relative grid grid-cols-1 gap-6 p-6 md:grid-cols-2">
         {/* LEFT SECTION – IMAGE */}
-        <div className="w-full h-full">
+        <div className="relative z-10 h-full w-full">
           {imgLink ? (
             <img
               src={`${imgLink}?tr=w-600,h-500,fo-auto,q-auto`}
               alt={title}
               loading="lazy"
-              className="w-full h-full object-cover rounded-lg border border-zinc-800 transition-transform duration-300 hover:scale-[1.02]"
+              className="h-full w-full rounded-xl border border-slate-200 object-cover transition-transform duration-300 hover:scale-[1.02]"
             />
           ) : (
-            <div className="w-full h-full flex items-center justify-center rounded-lg border border-zinc-800 text-zinc-500 text-sm">
+            <div className="flex h-full w-full items-center justify-center rounded-xl border border-dashed border-slate-200 bg-slate-50 text-sm text-slate-400">
               No Image
             </div>
           )}
         </div>
 
         {/* RIGHT SECTION – CONTENT */}
-        <div className="flex flex-col justify-between">
+        <div className="relative z-10 flex flex-col justify-between">
           {/* Title + Buttons */}
-          <div className="flex flex-col sm:flex-row justify-between items-start gap-3">
-            <h3 className="text-xl font-semibold text-white">{title}</h3>
+          <div className="flex flex-col items-start justify-between gap-3 sm:flex-row">
+            <h3 className="text-xl font-semibold text-slate-900">
+              {title}
+            </h3>
 
             <div className="flex gap-2">
               {githubLink && (
@@ -44,7 +46,7 @@ const Project = ({ title, githubLink,visitLink,imgLink, description, stack }: Pr
                   href={githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm border border-zinc-800 bg-zinc-900 hover:bg-zinc-800 hover:border-zinc-700 px-4 py-2 rounded-lg transition-all duration-200 text-zinc-300 hover:text-white flex items-center gap-2"
+                  className="flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm text-slate-700 transition-all duration-200 hover:border-slate-400 hover:bg-slate-50"
                 >
                   <i className="fa-brands fa-github" />
                   GitHub
@@ -56,7 +58,7 @@ const Project = ({ title, githubLink,visitLink,imgLink, description, stack }: Pr
                   href={visitLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm border border-zinc-800 bg-zinc-900 hover:bg-zinc-800 hover:border-zinc-700 px-4 py-2 rounded-lg transition-all duration-200 text-zinc-300 hover:text-white flex items-center gap-2"
+                  className="flex items-center gap-2 rounded-xl bg-sky-600 px-4 py-2 text-sm text-slate-50 shadow-sm transition-all duration-200 hover:bg-sky-500"
                 >
                   <i className="fas fa-globe" />
                   Visit
@@ -66,7 +68,7 @@ const Project = ({ title, githubLink,visitLink,imgLink, description, stack }: Pr
           </div>
 
           {/* Description */}
-          <ul className="mt-4 space-y-2 text-sm text-zinc-300 leading-relaxed list-disc ml-4">
+          <ul className="mt-4 ml-4 list-disc space-y-2 text-sm leading-relaxed text-slate-600">
             {description.map((desc:any, i:number) => (
               <li key={i}>{desc}</li>
             ))}
