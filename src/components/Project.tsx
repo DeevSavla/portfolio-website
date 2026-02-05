@@ -16,7 +16,6 @@ const Project = ({ title, githubLink, visitLink, imgLink, description, stack }: 
   return (
     <div className="mt-6 rounded-2xl border border-slate-200 bg-white shadow-md transition-all duration-200 hover:-translate-y-1.5 hover:shadow-lg">
       <div className="relative grid grid-cols-1 gap-6 p-6 md:grid-cols-2">
-        {/* LEFT SECTION – IMAGE */}
         <div className="relative z-10 h-full w-full">
           {imgLink ? (
             <img
@@ -32,7 +31,6 @@ const Project = ({ title, githubLink, visitLink, imgLink, description, stack }: 
           )}
         </div>
 
-        {/* RIGHT SECTION – CONTENT */}
         <div className="relative z-10 flex flex-col justify-between">
           {/* Title + Buttons */}
           <div className="flex flex-col items-start justify-between gap-3 sm:flex-row">
@@ -67,14 +65,12 @@ const Project = ({ title, githubLink, visitLink, imgLink, description, stack }: 
             </div>
           </div>
 
-          {/* Description */}
           <ul className="mt-4 ml-4 list-disc space-y-2 text-sm leading-relaxed text-slate-600">
             {description.map((desc:any, i:number) => (
               <li key={i}>{desc}</li>
             ))}
           </ul>
 
-          {/* Tech Stack */}
           <div className="mt-5 flex flex-wrap gap-2">
             {stack.map((tech, i) => (
               <Chip key={i} text={tech} />

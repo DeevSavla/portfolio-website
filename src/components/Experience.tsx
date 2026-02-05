@@ -16,7 +16,6 @@ const Experience = ({
   return (
     <div className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
       <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-        {/* Left: Logo + Role */}
         <div className="flex items-center gap-4">
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-base font-semibold text-slate-50">
             {initial}
@@ -25,11 +24,9 @@ const Experience = ({
             <div className="text-sm font-semibold text-slate-900">
               {name}
             </div>
-            {/* Company line could go here if separate from role */}
           </div>
         </div>
 
-        {/* Right: Timeline pill + icon */}
         <div className="flex items-center gap-3 self-stretch sm:self-auto sm:justify-end">
           <div className="rounded-full bg-slate-900 px-4 py-1.5 text-xs font-medium text-slate-50">
             {timeline}

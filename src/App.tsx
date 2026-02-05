@@ -36,10 +36,8 @@ export default function Home() {
       />
       <div className="relative flex justify-center p-4 sm:p-6 lg:p-10">
         <div className="mt-4 w-full max-w-5xl">
-          {/* Hero Section */}
           <section id="about" className="scroll-mt-20">
             <div className="grid gap-8 rounded-2xl bg-white p-10 shadow-md md:grid-cols-[minmax(0,2fr)_minmax(0,1.2fr)] md:items-center">
-              {/* Left: Text content */}
               <div className="space-y-6">
                 <div className="space-y-3">
                   <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
@@ -114,7 +112,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right: Photo / avatar */}
               <div className="flex h-40 w-40 items-center justify-center rounded-full bg-slate-100 shadow-inner md:h-48 md:w-48 md:justify-self-end md:mr-2">
                 <div className="flex h-32 w-32 items-center justify-center rounded-full bg-slate-900 text-4xl font-semibold text-slate-50 md:h-40 md:w-40">
                   DS
@@ -123,10 +120,8 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Divider */}
           <div className="my-12 h-px bg-slate-200" />
 
-          {/* Experience Section */}
           <section id="experience" className="scroll-mt-20">
             <h2 className="mb-8 text-2xl font-semibold text-slate-900 sm:text-3xl">
               Experience
@@ -144,7 +139,6 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Skills Section */}
           <section id="skills" className="mt-16 scroll-mt-20">
             <h2 className="mb-8 text-2xl font-semibold text-slate-900 sm:text-3xl">
               Skills
@@ -168,7 +162,6 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Projects Section */}
           <section id="projects" className="mt-16 scroll-mt-20">
             <h2 className="mb-8 text-2xl font-semibold text-slate-900 sm:text-3xl">
               Projects
@@ -187,8 +180,7 @@ export default function Home() {
               ))}
             </div>
           </section>
-
-          {/* Contact Section */}
+              
           <section id="contact" className="mt-16 mb-20 scroll-mt-20">
             <div className="rounded-2xl bg-white px-6 py-8 shadow-md">
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
