@@ -90,6 +90,24 @@ export const projects = [
     amworking: false,
   },
   {
+    title: "Online Image Store",
+    githubLink: "https://github.com/DeevSavla/online-image-store",
+    imgLink:"https://ik.imagekit.io/q4gjs3lt4/Screenshot_2025-09-15_113045_EZFC8fFv8.png?updatedAt=1760423734306",
+    visitLink: "https://online-image-store.vercel.app/",
+    description: [
+      "An online image marketplace built using Next.js, featuring secure authentication, role-based access control, and full product and order management",
+      "It integrates ImageKit for high-quality image delivery and Razorpay for seamless payments and webhook handling, providing a complete end-to-end commerce experience.",
+    ],
+    stack: [
+      "Next.js",
+      "MongoDB",
+      "NextAuth",
+      "NodeMailer",
+      "Razorpay"
+    ],
+    amworking: false,
+  },
+  {
     title: "Anonymous Message App",
     githubLink: "https://github.com/DeevSavla/message_app",
     imgLink:"https://ik.imagekit.io/q4gjs3lt4/Screenshot_2025-09-15_113045_EZFC8fFv8.png?updatedAt=1760423734306",
