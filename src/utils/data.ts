@@ -35,7 +35,7 @@ export const projects = [
     title: "Safar",
     githubLink: "https://github.com/DeevSavla/Safar",
     visitLink: "https://safar-swart.vercel.app/",
-    imgLink:"https://ik.imagekit.io/q4gjs3lt4/Screenshot_2025-09-15_113045_EZFC8fFv8.png?updatedAt=1760423734306",
+    imgLink:"https://ik.imagekit.io/q4gjs3lt4/safar.png",
     description: [
       "Designed and developed Safar, an AI-powered travel itinerary planner tailored for solo travelers, families, and groups, providing a web-based experience to simplify and personalize the trip planning process.",
       "Integrated features like smart itinerary generation using Gemini APIs, real-time collaboration, budget tracking, and interactive mapping tools, enhancing user convenience and transforming the way people plan and experience travel.",
@@ -54,7 +54,7 @@ export const projects = [
     title: "LikhAI",
     githubLink: "https://github.com/DeevSavla/likhai",
     visitLink: "https://likh-ai.vercel.app/",
-    imgLink:"https://ik.imagekit.io/q4gjs3lt4/Screenshot_2025-09-15_113045_EZFC8fFv8.png?updatedAt=1760423734306",
+    imgLink:"https://ik.imagekit.io/q4gjs3lt4/likhai.png",
     description: [
       "Designed and developed an AI-driven content collaboration platform for writers and filmmakers, featuring real-time editing, automated scene descriptions, and context-aware suggestions to refine tone and engagement.",
       "Integrated multi-modal support (text, audio, and visual), version history tracking, and export capabilities for various formats, ensuring seamless content creation and publishing.",
@@ -72,7 +72,7 @@ export const projects = [
   {
     title: "Doctor Appointment System",
     githubLink: "https://github.com/DeevSavla/Doc_Appoinment_System",
-    imgLink:"https://ik.imagekit.io/q4gjs3lt4/Screenshot_2025-09-15_113045_EZFC8fFv8.png?updatedAt=1760423734306",
+    imgLink:"https://ik.imagekit.io/q4gjs3lt4/doctor-appointment.png",
     visitLink: "https://doc-appoinment-system.vercel.app/",
     description: [
       "Developed a role-based hospital management platform featuring secure JWT authentication, real-time doctor availability tracking, and an AI-powered assistant (Medibot) for patient interactions and appointment workflows.",
@@ -92,7 +92,7 @@ export const projects = [
   {
     title: "Online Image Store",
     githubLink: "https://github.com/DeevSavla/online-image-store",
-    imgLink:"https://ik.imagekit.io/q4gjs3lt4/Screenshot_2025-09-15_113045_EZFC8fFv8.png?updatedAt=1760423734306",
+    imgLink:"https://ik.imagekit.io/q4gjs3lt4/online-store.png",
     visitLink: "https://online-image-store.vercel.app/",
     description: [
       "An online image marketplace built using Next.js, featuring secure authentication, role-based access control, and full product and order management",
@@ -110,7 +110,7 @@ export const projects = [
   {
     title: "Anonymous Message App",
     githubLink: "https://github.com/DeevSavla/message_app",
-    imgLink:"https://ik.imagekit.io/q4gjs3lt4/Screenshot_2025-09-15_113045_EZFC8fFv8.png?updatedAt=1760423734306",
+    imgLink:"https://ik.imagekit.io/q4gjs3lt4/message-app.png",
     visitLink: "https://anonymous-message-app-one.vercel.app/",
     description: [
       "Built a real-time anonymous messaging platform using Next.js, delivering a seamless, interactive user experience with server-side rendering, optimized performance, and responsive design.",
